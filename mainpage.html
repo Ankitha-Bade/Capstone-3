@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insider</title>
+    <link rel="stylesheet" href="./elements.css">
+</head>
+<body>
+    <nav id="nav">
+        <ul class="left-ul">
+            <li><a href=""><img src="./assets/logo.png" class="p"></a></li>
+        </ul>
+        <div class="empty"></div>
+        <form action="./php/login.php" method="post">
+            <ul class="right-ul">
+                <li>
+                    <select name="setting" class="nav-btn" id="options" onchange="run()">
+                        <option value="setting">Setting</option>
+                        <option value="logout"><a href="./index.html">Logout</a></option>
+                        <option value="delete">Delete Account</option>
+                    </select>
+                </li>
+            </ul>
+        </form>
+    </nav>
+    <div id="container">
+        
+    </div>
+
+    <div class="mart">
+        <br><h1 class="m">Martial Arts is a form of defense.<br>In a difficult situation and your fight or flight response kicks in,<br>Martial Arts can protect you!</h1><br>
+        <h3>Here is a link to learn more about Martial Arts!</h3>
+        <h1><b>⬇</b></h1>
+        <a class="g" href="https://en.wikipedia.org/wiki/Martial_arts">Click Here</a><br>
+        <h2>Or <br> You Can Scroll Down to learn about Taekwondo</h2>
+        <h1><b>⏬</b></h1><br>
+        <img src="./assets/martial (1).jpg" class="tkd"><br>
+        <li><a class="b" href="./tkwd.html">TAEKWONDO</a></li><br>
+      </div>
+
+
+    <div id="popupContact">
+        <form action="./php/delete.php" method="POST">
+            <div id="card">
+                <input type="text" id="email" name="phoneoremail" placeholder="Mobile number or Email">
+                <textarea name="description" id="details" placeholder="Reason to deactivate account"></textarea>
+                <button id="delete" type="submit">Delete Account</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function run(){
+            if(document.getElementById('options').value == "logout"){
+                window.location.href = "./index.html"
+            }
+            if(document.getElementById('options').value == "delete"){
+                document.getElementById('popupContact').style.display = "block";
+            }
+        }
+
+        function closeDiv(){
+            document.getElementById('popupContact').style.display = "none";
+            window.location.href = "./mainpage.html"
+        }
+    </script>
+</body>
+</html>

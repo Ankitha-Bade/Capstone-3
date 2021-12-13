@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insider</title>
+    <link rel="stylesheet" href="./elements.css">
+</head>
+<body>
+    <nav id="nav">
+        <ul class="left-ul">
+            <li><a href=""><img src="./assets/logo.png" class="p"></a></li>
+        </ul>
+        <div class="empty"></div>
+        <form action="./php/login.php" method="post">
+            <ul class="right-ul">
+                <li>
+                    <select name="setting" class="nav-btn" id="options" onchange="run()">
+                        <option value="setting">Setting</option>
+                        <option value="logout"><a href="./index.html">Logout</a></option>
+                    </select>
+                </li>
+            </ul>
+        </form>
+    </nav>
+    <div id="container">
+        
+    </div>
+
+    <div class="tkwd">
+        <h1><b>TAEKWONDO STAGES</b></h1><br>
+        <p class="t"><b>Each belt represents a level of achievment through your progress in Taekwondo. There are ten color belts before attaining a black belt, and nine degrees of black belt, as listed below. </b></p><br><br><br>
+        <p class="t"><b>1) Beginner ➡ White belt, Yellow-Stripe<br>2) Intermediate ➡ Yellow Belt, Green-Stripe, Green Belt<br>3) Advanced ➡ Blue-Stripe, Blue Belt, Red-Stripe, Red Belt<br>4) Junior Black-Belt ➡ Red-Stripe, 1, 2, 3 degree of Black Belt<br>5) Master ➡ 4, 5, 6 degree of Black Belt<br>6) Grand Master ➡ 7, 8, 9 degree of Black Belt</b></p><br></b></p><br>
+        <br><img class="pic" src="./assets/belt.png" alt="">
+    </div>
+
+    <div class="em">
+        <br><li><a href="./elements.html">Previous Page</a></li>
+    </div>
+
+    <script>
+        function run(){
+            if(document.getElementById('options').value == "logout"){
+                window.location.href = "./index.html"
+            }
+            if(document.getElementById('options').value == "delete"){
+                document.getElementById('popupContact').style.display = "block";
+            }
+        }
+
+        function closeDiv(){
+            document.getElementById('popupContact').style.display = "none";
+            window.location.href = "./mainpage.html"
+        }
+    </script>
+</body>
+</html>
